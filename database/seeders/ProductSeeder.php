@@ -13,9 +13,6 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('products')->insert([
-            ['name'=>'Laptop Pro', 'price'=>1299.99, /* ... */ ],
-            ['name'=>'Souris Ergonomique', 'price' =>79.50 /* ... */ ]
-        ]);
+        Product::factory()->count(50)->create();
     }
 }
