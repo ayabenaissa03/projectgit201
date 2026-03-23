@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $this->call([
+        CategorySeeder::class, // Les catégories doivent exister avant les produits !
         ProductSeeder::class,
         ]);
     }
